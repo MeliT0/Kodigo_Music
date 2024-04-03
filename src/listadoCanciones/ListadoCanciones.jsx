@@ -23,23 +23,24 @@ export const ListadoCanciones = () => {
 
   return (
     <Container>
-      <Header/>
-      <ListGroup numbered>
+      <Header />
+      <br /><br />
+      <h1>Listado de Canciones</h1>
+      <br />
+      <ListGroup numbered >
         {listaCanciones.map(cancion =>
-          <ListGroup.Item>
-            <label className="form-check-label" htmlFor="flexCheckIndeterminate">
-             <h5>{cancion.Nombre}</h5> 
-            </label>
+          <ListGroup.Item >
             <Link to='/editarCancion'>
-              <Button variant="outline-dark"  size="sm" as="input" type="button" value="Editar" />
+              <Button variant="outline-dark" size="sm" as="input" type="button" value="Editar" />
             </Link>
+            <label>
+              <h5>{cancion.Nombre}</h5>
+            </label>
           </ListGroup.Item>
         )}
       </ListGroup>
-      <br></br>
-      <Link to='/'> <Button variant="outline-dark" as="input" type="button" value="Home" /></Link>
-      <Footer/>
+      <Footer />
     </Container>
-   
+
   )
 }
